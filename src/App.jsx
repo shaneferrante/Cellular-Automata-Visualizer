@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 const height = 10;
@@ -55,7 +55,9 @@ function App() {
     <div className="App">
       <div className="menu">
         <h1>Cellular Automata Visualizer</h1>
-        <div className="start-button" onClick={nextBoard}>Start</div>
+        <div className="start-button">
+          Start
+        </div>
       </div>
       <Board initHeight={height} initWidth={width}></Board>
     </div>
