@@ -29,6 +29,7 @@ h1 {
   align-items: center;
   display:flex;
   padding: 16px;
+  user-select: none;
 }
 
 .start-button {
