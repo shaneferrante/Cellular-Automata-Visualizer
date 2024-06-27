@@ -34,14 +34,31 @@ h1 {
 
 .start-button {
   padding: 8px 16px;
+  width: 75px;
   margin: 0px 16px;
   border-radius: 20px;
   background-color: var(--secondary);
   cursor:pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-button.running {
+  background-color: red;
 }
 
 .start-button:hover {
   opacity: 80%;
+}
+
+.wrap {
+  height: 90%;
+  width: 100%;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .row {
@@ -49,20 +66,67 @@ h1 {
 }
 
 .cell {
-  height: 50px;
-  width: 50px;
   border-style: solid;
   border-radius: 20%;
   border-color: var(--dark);
   border-width: 2px;
 }
 
+.cell.small {
+  height: 28px;
+  width: 28px;
+}
+
+.cell.medium {
+  height: 48px;
+  width: 48px;
+}
+
+.cell.large {
+  height: 64px;
+  width: 64px;
+}
+
 .cell:hover {
   opacity: 80%;
-  
+}
+
+@keyframes activate {
+  from {background-color: var(--dark-alt);}
+  to {background-color: var(--primary);}  
+
 }
 
 .cell.full {
   background-color: var(--primary);
+  animation-name: activate;
+  animation-duration: 0s;
 }
 
+.slider-p {
+  text-align: center;
+}
+
+.customSlider {
+  width: 100px;
+  height: 20px;
+  margin: 0px 10px;
+}
+
+.customSlider-thumb {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background-color: var(--secondary);
+  top: 3px;
+}
+
+.customSlider-track {
+  height: 4px;
+  top: 8px;
+  background: var(--light);
+}
+
+.customSlider-track.customSlider-track-0 {
+  background: var(--light-alt);
+}
